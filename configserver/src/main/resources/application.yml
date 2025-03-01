@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  #    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/Haaris-Sayyed/mybank-config.git"
+          default-label: main
+          username: "{cipher}d9a9d6fa0956037ac2d24ff402b328c62ec42a4611fcf3e1035ec54da3dd6560"
+          password: "{cipher}76d30eae00afc001c54e0e1c117eaa159863191e0b62138ca6e175fcc25e012a732f698795d5c96eb6aae7ad54cafa3364034293a2528ce838f7b761bb93e994"
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+#        native:
+#          search-locations: "file:///D://config"
+#          search-locations: "classpath:/config"
+#  rabbitmq:
+#    host: "localhost"
+#    port: 5672
+#    username: "guest"
+#    password: "guest"
+server:
+  port: 8071
+
+encrypt:
+  key: "45D81EC1EF61DF9AD8D3E5BB397F8"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
