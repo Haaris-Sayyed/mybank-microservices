@@ -1,0 +1,6 @@
+dependencies:
+- name: eazybank-common
+  repository: file://../../mybank-common
+  version: 0.1.0
+digest: sha256:f9deb4d768926a116a1b8a7533267ee737f56838ac3f0d073001325b77e8741e
+generated: "2025-02-18T21:14:04.456067916+05:30"
