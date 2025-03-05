@@ -1,0 +1,1591 @@
+{
+	"info": {
+		"_postman_id": "30cfef1b-c2e2-4869-9f95-6f0d06f880df",
+		"name": "MS Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29718179"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "CreateAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "FetchAccountDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/fetch?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAccountDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/delete?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAccountDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Madan Mohan\",\r\n    \"email\": \"madan@gmail.com\",\r\n    \"mobileNumber\": \"9988776688\",\r\n    \"accountsDto\": {\r\n        \"accountNumber\": 1655647817,\r\n        \"accountType\": \"Current\",\r\n        \"branchAddress\": \"124 Main Street, New York\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/update"
+					},
+					"response": []
+				},
+				{
+					"name": "build-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/build-info"
+					},
+					"response": []
+				},
+				{
+					"name": "java-version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/java-version"
+					},
+					"response": []
+				},
+				{
+					"name": "contact-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshConfig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/actuator/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "BusRefresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/actuator/busrefresh"
+					},
+					"response": []
+				},
+				{
+					"name": "ShutDown",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/actuator/shutdown"
+					},
+					"response": []
+				},
+				{
+					"name": "FetchCustomerDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/fetchCustomerDetails?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"fetchCustomerDetails"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loans",
+			"item": [
+				{
+					"name": "CreateLoan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchLoanDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/fetch?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLoanDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"9988776655\",\r\n    \"loanNumber\": \"100741844818\",\r\n    \"loanType\": \"Vehicle Loan\",\r\n    \"totalLoan\": 100000,\r\n    \"amountPaid\": 10000,\r\n    \"outstandingAmount\": 90000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/api/update"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteLoanDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"4354437687\",\r\n    \"loanNumber\": \"100741844818\",\r\n    \"loanType\": \"Vehicle Loan\",\r\n    \"totalLoan\": 100000,\r\n    \"amountPaid\": 10000,\r\n    \"outstandingAmount\": 90000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/delete?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "build-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/api/build-info"
+					},
+					"response": []
+				},
+				{
+					"name": "java-version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/api/java-version"
+					},
+					"response": []
+				},
+				{
+					"name": "contact-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshConfig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8090/actuator/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "BusRefresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8090/actuator/busrefresh"
+					},
+					"response": []
+				},
+				{
+					"name": "ShutDown",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8090/actuator/shutdown"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cards",
+			"item": [
+				{
+					"name": "CreateCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchCardDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/fetch?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCardDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/delete?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCardDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"9988776655\",\r\n    \"cardNumber\": \"100238594252\",\r\n    \"cardType\": \"Credit Card\",\r\n    \"totalLimit\": 100000,\r\n    \"amountUsed\": 10000,\r\n    \"availableAmount\": 90000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9000/api/update"
+					},
+					"response": []
+				},
+				{
+					"name": "build-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9000/api/build-info"
+					},
+					"response": []
+				},
+				{
+					"name": "java-version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9000/api/java-version"
+					},
+					"response": []
+				},
+				{
+					"name": "contact-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9000/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshConfig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:9000/actuator/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "ShutDown",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:9000/actuator/shutdown"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configserver",
+			"item": [
+				{
+					"name": "encrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "plain-text",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "http://localhost:8071/encrypt"
+					},
+					"response": []
+				},
+				{
+					"name": "decrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "1528ed3d6bc2dcf0493743560c1398b4944e2f0e677ca9eefee6322c91f48d55",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "http://localhost:8071/decrypt"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eurekaserver",
+			"item": [
+				{
+					"name": "eureka_apps",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8070/eureka/apps/"
+					},
+					"response": []
+				},
+				{
+					"name": "eureka_apps_accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8070/eureka/apps/accounts"
+					},
+					"response": []
+				},
+				{
+					"name": "eureka_apps_loans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8070/eureka/apps/loans"
+					},
+					"response": []
+				},
+				{
+					"name": "eureka_apps_cards",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8070/eureka/apps/cards"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gatewayserver",
+			"item": [
+				{
+					"name": "gatewayserver_1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/accounts/api/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/loans/api/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/loans/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"loans",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/cards/api/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/cards/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"cards",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gatewayserver_3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "gatewayserver_2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/accounts/api/fetch?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"accounts",
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gatewayserver_4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/accounts/api/fetch?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"accounts",
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchCustomerDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/accounts/api/fetchCustomerDetails?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"accounts",
+								"api",
+								"fetchCustomerDetails"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/accounts/api/contact-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/loans/api/contact-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/loans/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/accounts/api/build-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/build-info"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/cards/api/build-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/cards/api/build-info"
+					},
+					"response": []
+				},
+				{
+					"name": "mybank/accounts/api/java-version",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/java-version"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "keycloak",
+			"item": [
+				{
+					"name": "ClientCredentials_AccessToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "mybank-callcenter-cc",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "CvDGZNMjsLV5fppWNGJBfI7QNOWIZp5p",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "openid email profile",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:7080/realms/master/protocol/openid-connect/token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gatewayserver_security",
+			"item": [
+				{
+					"name": "Accounts_GET_PermitAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8072/mybank/accounts/api/contact-info"
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts_POST_NoAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "yOpRzS6D8J0Mjxj9snSLpHPxQDdOSbdZ",
+								"addTokenTo": "header",
+								"refreshTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts_POST_AuthCode",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "kJ91sIF7wt2Azf61WTLsPXukiCWchiCP",
+								"refreshTokenUrl": "",
+								"addTokenTo": "header",
+								"tokenName": "authcode_accesstoken",
+								"authUrl": "http://localhost:7080/realms/master/protocol/openid-connect/auth",
+								"client_authentication": "body",
+								"state": "ew34er-344fgfg-5gfgfg",
+								"clientId": "mybank-callcenter-ac",
+								"useBrowser": true,
+								"redirect_uri": "",
+								"grant_type": "authorization_code",
+								"headerPrefix": "Bearer",
+								"scope": "openid email profile",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Loans_POST_AuthCode",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "4qOknHxY8WTjUkrLQVxlMbYlZLwY7GH4",
+								"refreshTokenUrl": "",
+								"addTokenTo": "header",
+								"tokenName": "authcode_accesstoken",
+								"authUrl": "http://localhost:7080/realms/master/protocol/openid-connect/auth",
+								"client_authentication": "body",
+								"state": "ew34er-344fgfg-5gfgfg",
+								"clientId": "mybank-callcenter-ac",
+								"useBrowser": true,
+								"redirect_uri": "",
+								"grant_type": "authorization_code",
+								"headerPrefix": "Bearer",
+								"scope": "openid email profile",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/loans/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"loans",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cards_POST_AuthCode",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "4qOknHxY8WTjUkrLQVxlMbYlZLwY7GH4",
+								"refreshTokenUrl": "",
+								"addTokenTo": "header",
+								"tokenName": "authcode_accesstoken",
+								"authUrl": "http://localhost:7080/realms/master/protocol/openid-connect/auth",
+								"client_authentication": "body",
+								"state": "ew34er-344fgfg-5gfgfg",
+								"clientId": "mybank-callcenter-ac",
+								"useBrowser": true,
+								"redirect_uri": "",
+								"grant_type": "authorization_code",
+								"headerPrefix": "Bearer",
+								"scope": "openid email profile",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/cards/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"cards",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cards_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "yOpRzS6D8J0Mjxj9snSLpHPxQDdOSbdZ",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/cards/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"cards",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loans_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "yOpRzS6D8J0Mjxj9snSLpHPxQDdOSbdZ",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"accessTokenUrl": "http://localhost:7080/realms/master/protocol/openid-connect/token",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8072/mybank/loans/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"loans",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cards_GET_PermitAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8072/mybank/cards/api/java-version"
+					},
+					"response": []
+				},
+				{
+					"name": "Loans_GET_PermitAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8072/mybank/loans/api/build-info"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": 1234545454,\r\n    \"name\": \"John Wick\",\r\n    \"email\": \"john@mybank.com\",\r\n    \"mobileNumber\": \"4354437687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9010/email"
+					},
+					"response": []
+				},
+				{
+					"name": "sms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": 1234545454,\r\n    \"name\": \"John Wick\",\r\n    \"email\": \"john@mybank.com\",\r\n    \"mobileNumber\": \"4354437687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9010/sms"
+					},
+					"response": []
+				},
+				{
+					"name": "emailsms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": 1234545454,\r\n    \"name\": \"John Wick\",\r\n    \"email\": \"john@mybank.com\",\r\n    \"mobileNumber\": \"4354437687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9010/emailsms"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GKE",
+			"item": [
+				{
+					"name": "FetchCustomerDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.57.23.132:8072/mybank/accounts/api/fetchCustomerDetails?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"34",
+								"57",
+								"23",
+								"132"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"accounts",
+								"api",
+								"fetchCustomerDetails"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "UitqrAuJknRnkLHMCG763ZaMavw0NNiz",
+								"refreshTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"accessTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Madan Reddy\",\r\n    \"email\":\"tutor@gmail.com\",\r\n    \"mobileNumber\":\"9988776655\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://34.57.23.132:8072/mybank/accounts/api/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Cards_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "UitqrAuJknRnkLHMCG763ZaMavw0NNiz",
+								"refreshTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"accessTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.57.23.132:8072/mybank/cards/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"34",
+								"57",
+								"23",
+								"132"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"cards",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loans_POST_ClientCredentials",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "UitqrAuJknRnkLHMCG763ZaMavw0NNiz",
+								"refreshTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"accessTokenUrl": "http://34.41.143.34/realms/master/protocol/openid-connect/token",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"client_authentication": "body",
+								"scope": "openid email profile",
+								"clientId": "mybank-callcenter-cc",
+								"grant_type": "client_credentials",
+								"tokenName": "clientcredentials_accesstoken"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.57.23.132:8072/mybank/loans/api/create?mobileNumber=9988776655",
+							"protocol": "http",
+							"host": [
+								"34",
+								"57",
+								"23",
+								"132"
+							],
+							"port": "8072",
+							"path": [
+								"mybank",
+								"loans",
+								"api",
+								"create"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "9988776655"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
